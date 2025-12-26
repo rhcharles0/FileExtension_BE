@@ -1,5 +1,4 @@
 import prisma from '@/src/lib/db';
-import * as bcrypt from 'bcrypt'; // 비밀번호 해시를 위한 라이브러리 (설치 필요)
 
 // 💡 초기에 데이터베이스에 삽입할 확장자 목록
 const initialExtensions = [
