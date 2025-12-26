@@ -16,24 +16,9 @@ const initialExtensions = [
 // 시드 데이터도 저장 시 소문자로 통일되도록 합니다.
 async function main() {
     console.log('🌱 Start seeding FileExtensions...');
-    // ----------------------------------------------------
-    // 1. User 시드 데이터 생성
-    // ----------------------------------------------------
-    const hashedPassword = await bcrypt.hash('admin123', 10);
-
-    const adminUser = await prisma.user.upsert({
-        where: { email: 'admin@example.com' }, // 이메일이 이미 있으면 업데이트, 없으면 생성
-        update: {},
-        create: {
-            email: 'admin@example.com',
-            password: hashedPassword,
-            name: '관리자',
-        },
-    });
-    console.log(`✅ Upserted user: ${adminUser.email}`);
 
     // ----------------------------------------------------
-    // 2. FileExtension 시드 데이터 생성
+    //  FileExtension 시드 데이터 생성
     // ----------------------------------------------------
     for (const ext of initialExtensions) {
         // 💡 1. 확장자 이름을 소문자로 강제 변환

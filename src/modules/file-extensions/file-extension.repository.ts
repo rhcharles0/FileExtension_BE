@@ -51,8 +51,8 @@ export const FileExtensionRepository = {
                 isAllowed: true,
             },
             orderBy: { id: 'asc' }, // 정렬 기준 추가
-        }); 
-    },  
+        });
+    },
 
     /**
      * 허용 상태(isAllowed)에 따라 여러 확장자 레코드를 찾습니다.
@@ -125,7 +125,9 @@ export const FileExtensionRepository = {
                 AND: [
                     {
                         // 프론트에서 보낸 리스트에 없어야 함
-                        name: { notIn: extensions.map((ext) => ext.toLowerCase()) },
+                        name: {
+                            notIn: extensions.map((ext) => ext.toLowerCase()),
+                        },
                     },
                     {
                         // 동시에 기본 확장자 리스트에도 없어야 함
