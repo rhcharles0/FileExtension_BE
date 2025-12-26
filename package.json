@@ -1,0 +1,34 @@
+{
+    "name": "file_extension_be",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "next dev -p 3006",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.2.0",
+        "@prisma/client-runtime-utils": "^7.2.0",
+        "bcrypt": "^6.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "formidable": "^3.5.4",
+        "next": "16.1.1",
+        "pg": "^8.16.3"
+    },
+    "devDependencies": {
+        "@prisma/client": "^7.2.0",
+        "@types/bcrypt": "^6.0.0",
+        "@types/cors": "^2.8.19",
+        "@types/formidable": "^3.4.6",
+        "@types/node": "^20",
+        "@types/pg": "^8.16.0",
+        "@types/react": "^19",
+        "prisma": "^7.2.0",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.21.0",
+        "typescript": "^5"
+    }
+}
